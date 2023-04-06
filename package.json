@@ -1,0 +1,33 @@
+{
+  "name": "studentbuddy",
+  "version": "1.0.0",
+  "description": "urban company training project",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shobha9250/studentBuddy.git"
+  },
+  "keywords": [
+    "node",
+    "ract",
+    "mern",
+    "mongo"
+  ],
+  "author": "shobha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shobha9250/studentBuddy/issues"
+  },
+  "homepage": "https://github.com/shobha9250/studentBuddy#readme",
+  "dependencies": {
+    "axios": "^1.3.5",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.3",
+    "passport": "^0.6.0"
+  }
+}
