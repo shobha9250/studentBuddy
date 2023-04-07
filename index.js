@@ -1,6 +1,8 @@
 require('dotenv').config();
 const express = require("express");
 const app = express();
+require("./utils/dbConnection");
+
 
 
 // middle wares
@@ -14,12 +16,17 @@ app.use(express.urlencoded({
 
 
 // routes import
-const testRoute = require("./routes/router");
+const userRoutes = require("./routes/users");
+const errorHandler = require('./middlewares/errorHandler');
 
 // routes use
+app.use("/api/v1/",userRoutes);
 
-app.use("/api/v1",testRoute);
 const port = process.env.PORT || 3000;
+
+
+
+app.use(errorHandler);
 app.listen(port,()=>{
     console.log(`process started @port: ${port}`)
 })
