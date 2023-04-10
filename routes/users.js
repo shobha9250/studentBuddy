@@ -4,7 +4,7 @@ const { registerUser, getUser, loginUser} = require("../controllers/user");
 const router = express.Router();
 const passport = require('passport');
 const User = require("../models/userModel");
-const { verifyAdmin, verifyUser, verifyToken } = require("../authenticate");
+const { verifyAdmin, verifyUser, verifyToken } = require("../middlewares/authenticate");
 
 router.post("/signup",registerUser);
 router.get("/all",verifyUser,verifyAdmin,getUser);

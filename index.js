@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require("express");
 const app = express();
 require("./utils/dbConnection");
-require("./authenticate");
+require(".");
 const passport = require('passport');
 
 // middle wares
@@ -20,11 +20,16 @@ app.use(passport.initialize());
 const userRoutes = require("./routes/users");
 const errorHandler = require('./middlewares/errorHandler');
 const homePageRoutes = require("./routes/homepage");
+const projectRoutes = require("./routes/projectNotes")
+const queryRoutes = require("./routes/query")
+const tutorialRoutes = require("./routes/tutorial")
 
 // routes use
 app.use("/api/v1/",userRoutes);
 app.use("/api/v1",homePageRoutes);
-
+app.use("/api/v1",projectRoutes);
+app.use("/api/v1",queryRoutes);
+app.use("/api/v1",tutorialRoutes);
 const port = process.env.PORT || 3000;
 
 

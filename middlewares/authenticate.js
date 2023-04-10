@@ -2,7 +2,7 @@ require("dotenv").config();
 var passport = require("passport");
 var JwtStrategy = require("passport-jwt").Strategy;
 var ExtractJwt = require("passport-jwt").ExtractJwt;
-const User = require("./models/userModel");
+const User = require("../models/userModel");
 const jwt = require("jsonwebtoken");
 
 var opts = {

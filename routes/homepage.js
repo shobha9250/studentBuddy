@@ -1,5 +1,5 @@
 const express= require("express");
-const { verifyUser, verifyAdmin } = require("../authenticate");
+const { verifyUser, verifyAdmin } = require("../middlewares/authenticate");
 const { getContributors } = require("../controllers/homepage/contributor");
 const { createEvent, updateEvent, getEventbyId, deleteEvent, getEvent } = require("../controllers/homepage/event");
 const { createHomeCards, getHomeCardbyId, getHomeCards, updateHomeCards, deleteHomeCards } = require("../controllers/homepage/homecard");

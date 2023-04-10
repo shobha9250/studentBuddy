@@ -10,7 +10,7 @@ exports.createContributor =async (userId,cnt)=>{
         if(contributor)
         {
 
-           await contributor.update({
+           await contributor.updateOne({
                 $inc:{
                     count:cnt
                 }
