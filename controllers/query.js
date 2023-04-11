@@ -99,12 +99,13 @@ exports.deleteQuery = (req,res) => {
         }
 
         try {
-            await query.delete();
+            await query.deleteOne();
             console.log(query);
             res.status(200).json({status: "Deleted !!",query:query});
             return;
        }
        catch(err) {
+        console.log(err);
         res.status(500).json({error: err});
         return;
        }
