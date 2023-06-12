@@ -12,7 +12,6 @@ router.delete("/query/:qid",authenticate.verifyUser,deleteQuery);
 router.post("/comment/:qid",authenticate.verifyUser,postComment);
 router.get("/resolvequery/:qid",authenticate.verifyUser,markResolved);
 router.post("/votecomment/:qid/:cid",authenticate.verifyUser,voteComment);
-// TODO:
 router.put("/updatecomment/:qid/:cid",authenticate.verifyUser,updateComment);
 router.delete("/deletecomment/:qid/:cid",authenticate.verifyUser,deleteComment);
 
