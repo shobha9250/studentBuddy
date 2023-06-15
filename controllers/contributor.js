@@ -1,5 +1,5 @@
-const Contributor = require("../../models/homepage/contributor");
-const User = require("../../models/userModel");
+const Contributor = require("../models/homepage/contributor");
+const User = require("../models/userModel");
 
 // create a contributor
 exports.createContributor =async (userId,cnt)=>{

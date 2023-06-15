@@ -19,7 +19,7 @@ app.use(passport.initialize());
 // routes import
 const userRoutes = require("./routes/users");
 const errorHandler = require('./middlewares/errorHandler');
-const homePageRoutes = require("./routes/homepage");
+const workShopRoutes = require("./routes/workShop");
 const projectRoutes = require("./routes/projectNotes")
 const queryRoutes = require("./routes/query")
 const tutorialRoutes = require("./routes/tutorial")

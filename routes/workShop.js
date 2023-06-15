@@ -1,7 +1,7 @@
 const express= require("express");
 const { verifyUser, verifyAdmin } = require("../middlewares/authenticate");
-const { getContributors } = require("../controllers/homepage/contributor");
-const { createWorkshop, getWorkshop, updateWorkshop, getWorkshopbyId, deleteWorkshop } = require("../controllers/homepage/workshop");
+const { getContributors } = require("../controllers/contributor");
+const { createWorkshop, getWorkshop, updateWorkshop, getWorkshopbyId, deleteWorkshop } = require("../controllers/workshop");
 const router = express.Router();
 router.get("/contributor",getContributors);
 

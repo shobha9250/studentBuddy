@@ -1,4 +1,4 @@
-const Workshop = require("../../models/homepage/workshop");
+const Workshop = require("../models/homepage/workshop");
 const { createContributor } = require("./contributor");
 
 //create Workshop
