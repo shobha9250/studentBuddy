@@ -22,6 +22,7 @@ exports.getWorkshop = (req, res) => {
     .then((data) => {
       
       res.status(200).json(data);
+      console.log("called");
       return;
     })
     .catch((err) => {

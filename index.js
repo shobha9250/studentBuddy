@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require("express");
+const cors = require('cors');
 const app = express();
 require("./utils/dbConnection");
 require(".");
@@ -24,13 +25,15 @@ const projectRoutes = require("./routes/projectNotes")
 const queryRoutes = require("./routes/query")
 const tutorialRoutes = require("./routes/tutorial")
 
+app.use(cors({ credentials: true,origin: true }));
+
 // routes use
 app.use("/api/v1/",userRoutes);
-app.use("/api/v1",homePageRoutes);
+app.use("/api/v1",workShopRoutes);
 app.use("/api/v1",projectRoutes);
 app.use("/api/v1",queryRoutes);
 app.use("/api/v1",tutorialRoutes);
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3030;
 
 
 

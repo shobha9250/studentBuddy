@@ -8,6 +8,9 @@ import { LOGIN } from './store/Types';
 import Reducer from './store/Reducer';
 import Store from './store/Store';
 import HomePage from './pages/HomePage'
+import EventPage from './pages/Events.js';
+import "../node_modules/bootstrap/dist/css/bootstrap.css"
+
 
 const Routess = () => {
   const initialState = useContext(Store);
@@ -30,7 +33,7 @@ const Routess = () => {
   return (
     <Store.Provider value={[state, dispatch]}>
       <Routes>
-        <Route exact path="/" element={<HomePage/>} />
+        <Route exact path="/" element={<EventPage/>} />
       </Routes>
     </Store.Provider>
   );

@@ -1,5 +1,5 @@
 const ProjectCard = require("../models/projectNotes");
-const { createContributor } = require("./homepage/contributor");
+const { createContributor } = require("./contributor");
 
 //create projectcard
 exports.createProjectCards = async (req,res) => {

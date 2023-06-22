@@ -1,5 +1,5 @@
 const Tutorial = require("../models/tutorial");
-const { createContributor } = require("./homepage/contributor");
+const { createContributor } = require("./contributor");
 
 //create tutorials
 exports.createTutorials = async (req, res) => {
